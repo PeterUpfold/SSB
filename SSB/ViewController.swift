@@ -7,11 +7,29 @@
 //
 
 import Cocoa
+import WebKit
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, WKNavigationDelegate, WKUIDelegate {
 
+    @IBOutlet weak var webView: WKWebView!
+    
+    override func loadView() {
+        super.loadView()
+        NSLog("Hello")
+        webView.uiDelegate = self
+        //view = webView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let url = URL(string: "https://peter.upfold.org.uk/")!
+        
+        webView.navigationDelegate = self
+        webView.allowsBackForwardNavigationGestures = true
+        let request = URLRequest(url: url)
+        webView.load(request)
 
         // Do any additional setup after loading the view.
     }
