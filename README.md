@@ -4,7 +4,7 @@ SSB
 This is a ‘base project’ template for a very simple site specific browser.
 
 The purpose of site specific browsers is to avoid the complexity and heavy weight of many
-applications‘ Electron-based "native" apps. These apps frequently have unnecessarily features,
+applications‘ Electron-based “native” apps. These apps frequently have unnecessary features,
 lack the security of a full browser's sandbox and/or potentially expose operating system functionality
 to web content through Node.js modules.
 
